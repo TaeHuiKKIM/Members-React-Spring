@@ -1,0 +1,17 @@
+# IDE / OS
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Project folders
+/frontend/node_modules
+/frontend/.next
+/backend/build
+/backend/out
+/backend/bin
