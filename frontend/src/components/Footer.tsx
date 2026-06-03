@@ -29,16 +29,16 @@ export default function Footer() {
             <h3 className="text-white font-medium mb-6 tracking-widest text-xs uppercase">{t('contact')}</h3>
             <ul className="space-y-4">
               <li>
-                <span className="block text-xs text-[#b39b82] mb-1 font-medium">{t('reservation')}</span>
+                <span className="block text-xs text-[#A38758] mb-1 font-medium">{t('reservation')}</span>
                 <span className="text-xl text-white font-light tracking-wider">02-543-4411</span>
               </li>
               <li>
-                <span className="block text-xs text-[#b39b82] mb-1 font-medium">{t('kakao')}</span>
-                <a href="https://pf.kakao.com/_RHxepG" target="_blank" rel="noopener noreferrer" className="font-light hover:text-[#b39b82] transition-colors">
+                <span className="block text-xs text-[#A38758] mb-1 font-medium">{t('kakao')}</span>
+                <a href="https://pf.kakao.com/_RHxepG" target="_blank" rel="noopener noreferrer" className="font-light hover:text-[#A38758] transition-colors">
                   @멤버스성형외과
                 </a>
               </li>
-              <li><span className="block text-xs text-[#b39b82] mb-1 font-medium">{t('address_label')}</span><span className="font-light">{t('address')}</span></li>
+              <li><span className="block text-xs text-[#A38758] mb-1 font-medium">{t('address_label')}</span><span className="font-light">{t('address')}</span></li>
             </ul>
           </div>
           
@@ -49,7 +49,7 @@ export default function Footer() {
               <li className="flex justify-between border-b border-[#2C2922] pb-2"><span>{t('weekday')}</span> <span>AM 10:00 - PM 07:00</span></li>
               <li className="flex justify-between border-b border-[#2C2922] pb-2"><span>{t('friday')}</span> <span>AM 10:00 - PM 09:00</span></li>
               <li className="flex justify-between border-b border-[#2C2922] pb-2"><span>{t('saturday')}</span> <span>AM 10:00 - PM 04:00</span></li>
-              <li className="text-xs text-[#b39b82] mt-4 font-medium">{t('sunday')}</li>
+              <li className="text-xs text-[#A38758] mt-4 font-medium">{t('sunday')}</li>
             </ul>
           </div>
           
@@ -57,16 +57,16 @@ export default function Footer() {
           <div className="col-span-1">
             <h3 className="text-white font-medium mb-6 tracking-widest text-xs uppercase">{t('quick')}</h3>
             <ul className="space-y-3 font-light">
-              <li><Link href="/about" className="hover:text-[#b39b82] transition-colors">병원소개</Link></li>
-              <li><Link href="/eye" className="hover:text-[#b39b82] transition-colors">눈 성형</Link></li>
-              <li><Link href="/nose" className="hover:text-[#b39b82] transition-colors">코 성형</Link></li>
-              <li><Link href="/qna" className="hover:text-[#b39b82] transition-colors">온라인 상담</Link></li>
+              <li><Link href="/about" className="hover:text-[#A38758] transition-colors">병원소개</Link></li>
+              <li><Link href="/eye" className="hover:text-[#A38758] transition-colors">눈 성형</Link></li>
+              <li><Link href="/nose" className="hover:text-[#A38758] transition-colors">코 성형</Link></li>
+              <li><Link href="/qna" className="hover:text-[#A38758] transition-colors">온라인 상담</Link></li>
               <li>
-                <a href="https://pf.kakao.com/_RHxepG" target="_blank" rel="noopener noreferrer" className="hover:text-[#b39b82] transition-colors">
+                <a href="https://pf.kakao.com/_RHxepG" target="_blank" rel="noopener noreferrer" className="hover:text-[#A38758] transition-colors">
                   카카오톡 상담
                 </a>
               </li>
-              <li><Link href="/reservation" className="hover:text-[#b39b82] transition-colors">예약하기</Link></li>
+              <li><Link href="/reservation" className="hover:text-[#A38758] transition-colors">예약하기</Link></li>
             </ul>
           </div>
         </div>

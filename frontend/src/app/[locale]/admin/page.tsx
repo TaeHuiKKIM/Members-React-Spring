@@ -37,7 +37,7 @@ export default function AdminDashboardPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
             <span className="text-gray-500 font-medium mb-2">답변 대기 중인 문의</span>
-            <span className="text-4xl font-bold text-[#b39b82]">{stats.pendingAnswers}건</span>
+            <span className="text-4xl font-bold text-[#A38758]">{stats.pendingAnswers}건</span>
           </div>
           
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">

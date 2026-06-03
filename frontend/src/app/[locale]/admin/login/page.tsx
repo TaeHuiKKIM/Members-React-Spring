@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
                 setError('');
               }}
               placeholder="마스터 비밀번호 입력" 
-              className="w-full border border-gray-300 rounded-xl p-4 focus:ring-2 focus:ring-[#b39b82] outline-none text-center font-bold tracking-widest"
+              className="w-full border border-gray-300 rounded-xl p-4 focus:ring-2 focus:ring-[#A38758] outline-none text-center font-bold tracking-widest"
               autoFocus
             />
             {error && <p className="text-red-500 text-sm mt-2">{error}</p>}

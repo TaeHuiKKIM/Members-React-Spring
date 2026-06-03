@@ -45,7 +45,7 @@ export default function KakaoCallbackPage() {
   return (
     <main className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="bg-white p-10 rounded-3xl shadow-xl max-w-sm w-full text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#b39b82] mx-auto mb-6"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#A38758] mx-auto mb-6"></div>
         <h2 className="text-xl font-bold text-gray-900 mb-2">Kakao Login</h2>
         <p className="text-gray-500 text-sm">{status}</p>
       </div>

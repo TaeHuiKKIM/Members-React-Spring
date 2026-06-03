@@ -80,7 +80,7 @@ export default function AdminQnaPage() {
               className={`p-4 border-b border-gray-50 cursor-pointer rounded-lg mb-1 transition-colors ${selectedQ?.id === q.id ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
             >
               <div className="flex justify-between items-start mb-2">
-                <span className={`px-2 py-1 text-xs font-bold rounded ${q.status === '답변완료' ? 'bg-[#b39b82]/10 text-[#b39b82]' : 'bg-red-100 text-red-600'}`}>
+                <span className={`px-2 py-1 text-xs font-bold rounded ${q.status === '답변완료' ? 'bg-[#A38758]/10 text-[#A38758]' : 'bg-red-100 text-red-600'}`}>
                   {q.status}
                 </span>
                 <span className="text-xs text-gray-400">{new Date(q.createdAt).toLocaleDateString()}</span>
@@ -113,12 +113,12 @@ export default function AdminQnaPage() {
               
               <div className="mt-8 border-t border-gray-200 pt-6">
                 <h3 className="text-sm font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="w-2 h-2 rounded-full bg-[#b39b82] mr-2"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#A38758] mr-2"></span>
                   답변 작성
                 </h3>
                 <textarea 
                   rows={6} 
-                  className="w-full border border-gray-300 rounded-xl p-4 focus:ring-2 focus:ring-[#b39b82] outline-none resize-none"
+                  className="w-full border border-gray-300 rounded-xl p-4 focus:ring-2 focus:ring-[#A38758] outline-none resize-none"
                   placeholder="고객에게 전달할 답변을 입력하세요."
                   value={answerInput}
                   onChange={(e) => setAnswerInput(e.target.value)}

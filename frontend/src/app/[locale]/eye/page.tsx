@@ -10,7 +10,7 @@ export default function EyeSurgeryPage() {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            {t('title')} <span className="text-[#b39b82] font-light">| Signature Eye Surgery</span>
+            {t('title')} <span className="text-[#A38758] font-light">| Signature Eye Surgery</span>
           </h1>
           <p className="text-[#7A7A7A] text-lg max-w-2xl mx-auto leading-relaxed font-light">
             {t('subtitle')}
@@ -23,14 +23,14 @@ export default function EyeSurgeryPage() {
           </div>
           <div className="space-y-12">
             <div>
-              <h3 className="text-xs font-semibold tracking-[0.2em] text-[#b39b82] uppercase mb-3">{t('tag1')}</h3>
+              <h3 className="text-xs font-semibold tracking-[0.2em] text-[#A38758] uppercase mb-3">{t('tag1')}</h3>
               <h4 className="text-2xl font-light mb-4 text-gray-900">{t('title1')}</h4>
               <p className="text-[#7A7A7A] leading-relaxed font-light">
                 {t('desc1')}
               </p>
             </div>
             <div>
-              <h3 className="text-xs font-semibold tracking-[0.2em] text-[#b39b82] uppercase mb-3">{t('tag2')}</h3>
+              <h3 className="text-xs font-semibold tracking-[0.2em] text-[#A38758] uppercase mb-3">{t('tag2')}</h3>
               <h4 className="text-2xl font-light mb-4 text-gray-900">{t('title2')}</h4>
               <p className="text-[#7A7A7A] leading-relaxed font-light">
                 {t('desc2')}

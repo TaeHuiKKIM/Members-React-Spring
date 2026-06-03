@@ -13,7 +13,7 @@ export default function HomePage() {
       <section className="py-32" style={{ backgroundColor: 'var(--premium-surface)' }}>
         <div className="container mx-auto px-6 text-center">
           <div className="mb-4 inline-block">
-            <span className="text-[#b39b82] text-xs font-semibold tracking-widest uppercase">Portfolio</span>
+            <span className="text-[#A38758] text-xs font-semibold tracking-widest uppercase">Portfolio</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6 tracking-tight">눈부신 변화의 시작</h2>
           <p className="text-[#7A7A7A] max-w-2xl mx-auto mb-20 font-light leading-relaxed">

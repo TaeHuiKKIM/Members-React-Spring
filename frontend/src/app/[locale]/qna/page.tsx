@@ -122,7 +122,7 @@ export default function QnaPage() {
                         {q.author.length > 1 ? q.author.substring(0, 1) + '*' + q.author.substring(2) : q.author}
                       </td>
                       <td className="p-4 text-center">
-                        <span className={`px-2 py-1 rounded text-xs font-bold ${q.status === '답변완료' ? 'bg-[#b39b82]/10 text-[#b39b82] border border-[#b39b82]/20' : 'bg-gray-100 text-gray-600'}`}>
+                        <span className={`px-2 py-1 rounded text-xs font-bold ${q.status === '답변완료' ? 'bg-[#A38758]/10 text-[#A38758] border border-[#A38758]/20' : 'bg-gray-100 text-gray-600'}`}>
                           {q.status}
                         </span>
                       </td>
@@ -137,7 +137,7 @@ export default function QnaPage() {
                             </div>
                             {q.answer && (
                               <div className="bg-white p-4 rounded-xl border border-gray-200 mt-4">
-                                <span className="inline-block px-2 py-1 bg-[#b39b82]/10 text-[#b39b82] text-xs font-bold rounded mb-2">병원 답변</span>
+                                <span className="inline-block px-2 py-1 bg-[#A38758]/10 text-[#A38758] text-xs font-bold rounded mb-2">병원 답변</span>
                                 <p className="text-gray-800 whitespace-pre-wrap">{q.answer}</p>
                               </div>
                             )}
@@ -199,7 +199,7 @@ export default function QnaPage() {
                     type="number" 
                     value={captchaInput}
                     onChange={(e) => setCaptchaInput(e.target.value)}
-                    className="flex-1 max-w-[150px] border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#b39b82] outline-none font-bold" 
+                    className="flex-1 max-w-[150px] border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#A38758] outline-none font-bold" 
                     placeholder="정답 입력" 
                   />
                   <span className="text-sm text-gray-500">자동 등록을 방지하기 위해 정답을 입력해주세요.</span>
@@ -207,7 +207,7 @@ export default function QnaPage() {
               </div>
 
               <div className="flex justify-end pt-4">
-                <button type="submit" className="bg-[#b39b82] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#a08a73] transition-colors shadow-md">
+                <button type="submit" className="bg-[#A38758] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#a08a73] transition-colors shadow-md">
                   등록하기
                 </button>
               </div>

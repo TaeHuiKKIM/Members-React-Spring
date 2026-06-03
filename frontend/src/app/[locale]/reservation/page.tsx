@@ -43,7 +43,7 @@ export default function ReservationPage() {
       <div className="container mx-auto px-6 max-w-2xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">Reservation</h1>
-          <div className="w-10 h-[1px] bg-[#b39b82] mx-auto mb-6"></div>
+          <div className="w-10 h-[1px] bg-[#A38758] mx-auto mb-6"></div>
           <p className="text-[#7A7A7A] text-sm tracking-wide">
             가장 아름다운 순간을 위한 첫 걸음,<br/>
             멤버스가 함께하겠습니다.
