@@ -72,6 +72,7 @@ export default function Header() {
             </svg>
           </button>
         </div>
+      </header>
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-white z-40 transition-transform duration-500 ease-in-out transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
