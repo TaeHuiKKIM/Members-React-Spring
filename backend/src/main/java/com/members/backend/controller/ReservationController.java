@@ -21,8 +21,4 @@ public class ReservationController {
         return reservationRepository.save(reservation);
     }
 
-    @GetMapping
-    public List<Reservation> getAllReservations() {
-        return reservationRepository.findAll();
-    }
 }

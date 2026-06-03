@@ -25,4 +25,19 @@ public class QuestionController {
     public List<Question> getAllQuestions() {
         return questionRepository.findAll();
     }
+
+    @PutMapping("/{id}/answer")
+    public org.springframework.http.ResponseEntity<?> answerQuestion(@PathVariable Long id, @RequestBody java.util.Map<String, String> body) {
+        String answerContent = body.get("answer");
+        if (answerContent == null || answerContent.trim().isEmpty()) {
+            return org.springframework.http.ResponseEntity.badRequest().body("Answer cannot be empty");
+        }
+
+        return questionRepository.findById(id).map(question -> {
+            question.setAnswer(answerContent);
+            question.setStatus("답변완료");
+            questionRepository.save(question);
+            return org.springframework.http.ResponseEntity.ok(question);
+        }).orElse(org.springframework.http.ResponseEntity.notFound().build());
+    }
 }

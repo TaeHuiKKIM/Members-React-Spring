@@ -15,6 +15,10 @@ public class Question {
     private String content;
     private String author;
     private String password;
+    
+    @Column(length = 2000)
+    private String answer;
+    
     private String status = "대기중";
     private LocalDateTime createdAt = LocalDateTime.now();
 }
