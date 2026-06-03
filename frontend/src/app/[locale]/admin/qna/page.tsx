@@ -70,7 +70,7 @@ export default function AdminQnaPage() {
       {/* List Panel */}
       <div className="w-1/2 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
         <div className="p-6 border-b border-gray-100">
-          <h2 className="text-xl font-bold text-gray-900">상담 목록</h2>
+          <h2 className="text-xl font-bold text-[var(--foreground)]">상담 목록</h2>
         </div>
         <div className="overflow-y-auto flex-1 p-2">
           {questions.map(q => (
@@ -80,12 +80,12 @@ export default function AdminQnaPage() {
               className={`p-4 border-b border-gray-50 cursor-pointer rounded-lg mb-1 transition-colors ${selectedQ?.id === q.id ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
             >
               <div className="flex justify-between items-start mb-2">
-                <span className={`px-2 py-1 text-xs font-bold rounded ${q.status === '답변완료' ? 'bg-[#A38758]/10 text-[#A38758]' : 'bg-red-100 text-red-600'}`}>
+                <span className={`px-2 py-1 text-xs font-bold rounded ${q.status === '답변완료' ? 'bg-[var(--premium-gold)]/10 text-[var(--premium-gold)]' : 'bg-red-100 text-red-600'}`}>
                   {q.status}
                 </span>
                 <span className="text-xs text-gray-400">{new Date(q.createdAt).toLocaleDateString()}</span>
               </div>
-              <h3 className="font-bold text-gray-900 truncate">{q.title}</h3>
+              <h3 className="font-bold text-[var(--foreground)] truncate">{q.title}</h3>
               <p className="text-sm text-gray-500 mt-1">작성자: {q.author}</p>
             </div>
           ))}
@@ -100,7 +100,7 @@ export default function AdminQnaPage() {
         {selectedQ ? (
           <div className="flex flex-col h-full">
             <div className="p-6 border-b border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900 mb-2">{selectedQ.title}</h2>
+              <h2 className="text-xl font-bold text-[var(--foreground)] mb-2">{selectedQ.title}</h2>
               <div className="text-sm text-gray-500 flex justify-between">
                 <span>작성자: {selectedQ.author}</span>
                 <span>{new Date(selectedQ.createdAt).toLocaleString()}</span>
@@ -112,8 +112,8 @@ export default function AdminQnaPage() {
               <p className="text-gray-800 whitespace-pre-wrap leading-relaxed">{selectedQ.content}</p>
               
               <div className="mt-8 border-t border-gray-200 pt-6">
-                <h3 className="text-sm font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="w-2 h-2 rounded-full bg-[#A38758] mr-2"></span>
+                <h3 className="text-sm font-bold text-[var(--foreground)] mb-4 flex items-center">
+                  <span className="w-2 h-2 rounded-full bg-[var(--premium-gold)] mr-2"></span>
                   답변 작성
                 </h3>
                 <textarea 
@@ -126,7 +126,7 @@ export default function AdminQnaPage() {
                 <div className="mt-4 flex justify-end">
                   <button 
                     onClick={submitAnswer}
-                    className="bg-gray-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-gray-800 transition-colors shadow-sm"
+                    className="bg-[var(--foreground)] text-white font-bold py-3 px-8 rounded-xl hover:bg-gray-800 transition-colors shadow-sm"
                   >
                     답변 등록하기
                   </button>

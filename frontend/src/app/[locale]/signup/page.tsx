@@ -9,7 +9,7 @@ export default function SignupPage() {
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col justify-center items-center px-6 pt-24 pb-12">
       <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-10">
-        <h1 className="text-3xl font-bold tracking-tighter text-gray-900 mb-8 text-center">회원가입</h1>
+        <h1 className="text-3xl font-bold tracking-tighter text-[var(--foreground)] mb-8 text-center">회원가입</h1>
         
         <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
           {/* Form Fields */}
@@ -39,20 +39,20 @@ export default function SignupPage() {
           {/* Terms Agreement */}
           <div className="pt-4 border-t border-gray-100">
             <label className="flex items-start space-x-3 cursor-pointer p-2 hover:bg-gray-50 rounded-lg">
-              <input type="checkbox" className="mt-1 rounded text-gray-900 focus:ring-0" />
+              <input type="checkbox" className="mt-1 rounded text-[var(--foreground)] focus:ring-0" />
               <span className="text-sm text-gray-600">
-                <span className="font-bold text-gray-900">[필수]</span> 서비스 이용약관 및 개인정보 수집·이용에 동의합니다.
+                <span className="font-bold text-[var(--foreground)]">[필수]</span> 서비스 이용약관 및 개인정보 수집·이용에 동의합니다.
               </span>
             </label>
             <label className="flex items-start space-x-3 cursor-pointer p-2 hover:bg-gray-50 rounded-lg">
-              <input type="checkbox" className="mt-1 rounded text-gray-900 focus:ring-0" />
+              <input type="checkbox" className="mt-1 rounded text-[var(--foreground)] focus:ring-0" />
               <span className="text-sm text-gray-600">
                 <span className="text-gray-500">[선택]</span> 이벤트 및 혜택 알림 수신에 동의합니다.
               </span>
             </label>
           </div>
 
-          <button type="submit" className="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-colors mt-6">
+          <button type="submit" className="w-full bg-[var(--foreground)] text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-colors mt-6">
             가입하기
           </button>
         </form>

@@ -40,9 +40,9 @@ export default function AdminLayout({
   return (
     <div className="min-h-screen bg-gray-100 flex">
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-900 text-white flex flex-col pt-8 pb-4">
+      <aside className="w-64 bg-[var(--foreground)] text-white flex flex-col pt-8 pb-4">
         <div className="px-6 mb-10">
-          <h2 className="text-2xl font-bold tracking-widest text-[#A38758]">ADMIN</h2>
+          <h2 className="text-2xl font-bold tracking-widest text-[var(--premium-gold)]">ADMIN</h2>
           <p className="text-xs text-gray-400 mt-2">Members Clinic</p>
         </div>
         

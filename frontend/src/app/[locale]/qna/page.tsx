@@ -88,7 +88,7 @@ export default function QnaPage() {
   return (
     <main className="min-h-screen bg-gray-50 pt-32 pb-24">
       <div className="container mx-auto px-6 max-w-4xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">온라인 상담 (Q&A)</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4 text-center">온라인 상담 (Q&A)</h1>
         <p className="text-gray-500 text-center mb-12 text-lg">
           궁금한 점이 있으신가요? 회원가입 없이 간편하게 질문을 남겨주시면,<br className="hidden md:block"/> 
           멤버스 성형외과의 전문 의료진이 직접 24시간 내에 답변해 드립니다.
@@ -122,7 +122,7 @@ export default function QnaPage() {
                         {q.author.length > 1 ? q.author.substring(0, 1) + '*' + q.author.substring(2) : q.author}
                       </td>
                       <td className="p-4 text-center">
-                        <span className={`px-2 py-1 rounded text-xs font-bold ${q.status === '답변완료' ? 'bg-[#A38758]/10 text-[#A38758] border border-[#A38758]/20' : 'bg-gray-100 text-gray-600'}`}>
+                        <span className={`px-2 py-1 rounded text-xs font-bold ${q.status === '답변완료' ? 'bg-[var(--premium-gold)]/10 text-[var(--premium-gold)] border border-[#A38758]/20' : 'bg-gray-100 text-gray-600'}`}>
                           {q.status}
                         </span>
                       </td>
@@ -137,7 +137,7 @@ export default function QnaPage() {
                             </div>
                             {q.answer && (
                               <div className="bg-white p-4 rounded-xl border border-gray-200 mt-4">
-                                <span className="inline-block px-2 py-1 bg-[#A38758]/10 text-[#A38758] text-xs font-bold rounded mb-2">병원 답변</span>
+                                <span className="inline-block px-2 py-1 bg-[var(--premium-gold)]/10 text-[var(--premium-gold)] text-xs font-bold rounded mb-2">병원 답변</span>
                                 <p className="text-gray-800 whitespace-pre-wrap">{q.answer}</p>
                               </div>
                             )}
@@ -155,7 +155,7 @@ export default function QnaPage() {
         <div className="flex justify-end">
           <button 
             onClick={() => setIsWriting(!isWriting)}
-            className="bg-gray-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-gray-800 transition-colors shadow-md"
+            className="bg-[var(--foreground)] text-white font-bold py-3 px-8 rounded-xl hover:bg-gray-800 transition-colors shadow-md"
           >
             {isWriting ? '취소하기' : '상담글 작성하기'}
           </button>
@@ -164,7 +164,7 @@ export default function QnaPage() {
         {/* Question Writing Form */}
         {isWriting && (
           <div className="mt-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-500">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900">새 상담글 작성</h2>
+            <h2 className="text-2xl font-bold mb-6 text-[var(--foreground)]">새 상담글 작성</h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -187,7 +187,7 @@ export default function QnaPage() {
               
               {/* Anti-Spam Captcha Section */}
               <div className="bg-gray-50 p-4 rounded-xl border border-gray-200">
-                <label className="block text-sm font-bold text-gray-900 mb-2">
+                <label className="block text-sm font-bold text-[var(--foreground)] mb-2">
                   스팸 방지 퀴즈 <span className="text-red-500">*</span>
                 </label>
                 <div className="flex items-center space-x-4">
@@ -207,7 +207,7 @@ export default function QnaPage() {
               </div>
 
               <div className="flex justify-end pt-4">
-                <button type="submit" className="bg-[#A38758] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#a08a73] transition-colors shadow-md">
+                <button type="submit" className="bg-[var(--premium-gold)] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#a08a73] transition-colors shadow-md">
                   등록하기
                 </button>
               </div>

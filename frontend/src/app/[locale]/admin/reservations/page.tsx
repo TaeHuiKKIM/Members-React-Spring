@@ -58,7 +58,7 @@ export default function AdminReservationsPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">온라인 예약 관리</h1>
+      <h1 className="text-3xl font-bold text-[var(--foreground)] mb-8">온라인 예약 관리</h1>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
@@ -84,9 +84,9 @@ export default function AdminReservationsPage() {
                 reservations.map((reservation) => (
                   <tr key={reservation.id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                     <td className="p-4 text-gray-500">#{reservation.id}</td>
-                    <td className="p-4 font-medium text-gray-900">{reservation.name}</td>
+                    <td className="p-4 font-medium text-[var(--foreground)]">{reservation.name}</td>
                     <td className="p-4 text-gray-700">{reservation.phone}</td>
-                    <td className="p-4 text-gray-900 font-medium">{reservation.date}</td>
+                    <td className="p-4 text-[var(--foreground)] font-medium">{reservation.date}</td>
                     <td className="p-4">
                       <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">
                         {reservation.procedureType}

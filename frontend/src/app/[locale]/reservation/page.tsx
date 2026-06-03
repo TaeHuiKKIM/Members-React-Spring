@@ -42,9 +42,9 @@ export default function ReservationPage() {
     <main className="min-h-screen pt-32 pb-24" style={{ backgroundColor: 'var(--background)' }}>
       <div className="container mx-auto px-6 max-w-2xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">Reservation</h1>
-          <div className="w-10 h-[1px] bg-[#A38758] mx-auto mb-6"></div>
-          <p className="text-[#7A7A7A] text-sm tracking-wide">
+          <h1 className="text-4xl font-light text-[var(--foreground)] mb-4 tracking-tight">Reservation</h1>
+          <div className="w-10 h-[1px] bg-[var(--premium-gold)] mx-auto mb-6"></div>
+          <p className="text-[var(--premium-text-light)] text-sm tracking-wide">
             가장 아름다운 순간을 위한 첫 걸음,<br/>
             멤버스가 함께하겠습니다.
           </p>
@@ -111,7 +111,7 @@ export default function ReservationPage() {
 
             <div className="bg-[#FAFAF8] p-6 rounded-lg border border-[#E8E6E1] mt-8">
               <h4 className="text-xs font-semibold text-gray-800 mb-3 tracking-widest">NOTICE</h4>
-              <ul className="text-[13px] text-[#7A7A7A] space-y-2 leading-relaxed">
+              <ul className="text-[13px] text-[var(--premium-text-light)] space-y-2 leading-relaxed">
                 <li>• 예약 신청 후, 병원에서 전화를 드려 구체적인 예약 일시를 확정해 드립니다.</li>
                 <li>• 당일 예약이나 급한 일정은 대표번호로 문의 바랍니다.</li>
               </ul>

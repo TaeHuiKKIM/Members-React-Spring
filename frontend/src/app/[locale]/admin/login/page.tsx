@@ -19,9 +19,9 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-900 flex items-center justify-center py-20 px-4">
+    <main className="min-h-screen bg-[var(--foreground)] flex items-center justify-center py-20 px-4">
       <div className="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">ADMIN LOGIN</h1>
+        <h1 className="text-3xl font-bold text-[var(--foreground)] mb-2">ADMIN LOGIN</h1>
         <p className="text-gray-500 mb-8 text-sm">멤버스 성형외과 관리자 대시보드</p>
         
         <form onSubmit={handleLogin} className="space-y-6">
@@ -42,7 +42,7 @@ export default function AdminLoginPage() {
           
           <button 
             type="submit"
-            className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-4 rounded-xl transition-colors shadow-sm"
+            className="w-full bg-[var(--foreground)] hover:bg-gray-800 text-white font-bold py-4 px-4 rounded-xl transition-colors shadow-sm"
           >
             관리자 접속
           </button>
