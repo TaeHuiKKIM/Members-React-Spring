@@ -5,8 +5,8 @@
   --background: #FAFAF8;
   --foreground: #2D2D2D;
   --premium-surface: #FFFFFF;
-  --premium-gold: #A4855D;
-  --premium-gold-hover: #8F724C;
+  --premium-gold: #BA958D;
+  --premium-gold-hover: #A17D76;
   --premium-border: #E8E6E1;
   --premium-text-light: #7A7A7A;
 }
@@ -29,8 +29,8 @@
     --background: #FAFAF8 !important;
     --foreground: #2D2D2D !important;
     --premium-surface: #FFFFFF !important;
-    --premium-gold: #A4855D !important;
-    --premium-gold-hover: #8F724C !important;
+    --premium-gold: #BA958D !important;
+    --premium-gold-hover: #A17D76 !important;
     --premium-border: #E8E6E1 !important;
     --premium-text-light: #7A7A7A !important;
   }
