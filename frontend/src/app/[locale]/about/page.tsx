@@ -10,12 +10,12 @@ export default function AboutPage() {
     const images = [];
     for (let i = 1; i <= 69; i++) {
       images.push(
-        <div key={i} className="aspect-square relative overflow-hidden rounded-md border border-[var(--premium-border)] bg-gray-50 hover:shadow-md transition-shadow">
+        <div key={i} className="aspect-video relative overflow-hidden rounded-md border border-[var(--premium-border)] bg-gray-50 hover:shadow-md transition-shadow">
           <Image 
             src={`/assets/images/content/broadcast_${i}.webp`} 
             fill 
-            sizes="(max-width: 768px) 33vw, 20vw"
-            className="object-cover hover:scale-105 transition-transform duration-500" 
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-contain bg-black/5 hover:scale-105 transition-transform duration-500" 
             alt={`매체 출연 ${i}`} 
           />
         </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
             <h3 className="text-3xl font-light text-[var(--foreground)]">{t('media_title')}</h3>
           </div>
           
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
             {renderBroadcastImages()}
           </div>
         </div>
