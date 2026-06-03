@@ -1,5 +1,77 @@
 {
-  "Index": {
-    "title": "Members Clinic"
+  "Header": {
+    "about": "About Us",
+    "eye": "Eye Surgery",
+    "nose": "Rhinoplasty",
+    "lifting": "Lifting",
+    "qna": "Q&A",
+    "reservation": "Reservation",
+    "login": "Login"
+  },
+  "Hero": {
+    "title": "Your Beauty with Members",
+    "subtitle": "We promise the most ideal results with endless research and exclusive technology.",
+    "button": "Book a Consultation",
+    "scroll": "SCROLL"
+  },
+  "Footer": {
+    "description": "Premium beauty solutions that find your hidden value. Welcome to Members Plastic Surgery.",
+    "contact": "CONTACT US",
+    "reservation": "Consultation & Booking",
+    "kakao": "KakaoTalk Channel",
+    "address_label": "Location",
+    "address": "5F Members Tower, 123 Gangnam-daero, Gangnam-gu, Seoul",
+    "hours": "CLINIC HOURS",
+    "weekday": "Mon - Thu",
+    "friday": "Friday (Night)",
+    "saturday": "Saturday",
+    "sunday": "* Closed on Sundays & Public Holidays",
+    "quick": "QUICK LINKS",
+    "copyright": "Company: Members Clinic | CEO: TaeHui Kim | Business No: 123-45-67890"
+  },
+  "About": {
+    "title": "Safety, and Perfect Beauty.",
+    "subtitle": "Members Plastic Surgery goes beyond simple aesthetic changes; our priority is finding your hidden value and confidence. Based on over 10 years of clinical experience, we insist on safe and honest medical care.",
+    "director": "Chief Director",
+    "quote": "\"1:1 Custom Design Without Overtreatment\"",
+    "desc": "Every face has its own unique charm. Rejecting factory-style surgeries, our Chief Director takes full responsibility from pre-surgery consultation to post-surgery care. We never compromise on safety and constantly research for natural results.",
+    "list1": "Regular Member, Korean Society of Plastic and Reconstructive Surgeons",
+    "list2": "Regular Member, Korean Society for Aesthetic Plastic Surgery",
+    "list3": "Former Eye/Nose Specialist at Major Plastic Surgery Hospital",
+    "list4": "Invited Speaker at Multiple International Aesthetic Symposia",
+    "fac_title": "Premium Facilities",
+    "fac1": "Comfortable Lounge",
+    "fac2": "Private Consultation Room",
+    "fac3": "Aseptic Operating Room"
+  },
+  "Eye": {
+    "title": "Eye Surgery",
+    "subtitle": "By precisely analyzing individual eye characteristics and facial proportions, we create natural and clear eyes that look like your own. Members' micro-suture technology minimizes scars and swelling, ensuring a quick return to daily life.",
+    "tag1": "01. Natural Adhesion",
+    "title1": "Members Signature Natural Adhesion",
+    "desc1": "Naturally adheres the eyelid skin and muscle through micro-holes without skin incision. No surgical marks are left even when the eyes are closed, and it is a specialized surgical method of Members that drastically reduces the unravelling phenomenon.",
+    "tag2": "02. Ptosis Correction",
+    "title2": "Non-incision Ptosis Correction",
+    "desc2": "Corrects sleepy-looking eyes and the habit of opening eyes with the forehead by adjusting the tension of the eye-opening muscle (levator palpebrae superioris). When combined with double eyelid surgery, it increases pupil exposure to create a much larger and clearer impression."
+  },
+  "Nose": {
+    "title": "Rhinoplasty",
+    "subtitle": "The nose is the center of the face; we consider the side S-line connecting from the forehead to the tip of the chin rather than just raising it. Through 3D-CT stereoscopic analysis, we grasp the individual bone structure and cartilage condition to design the most harmonious line.",
+    "tag1": "01. Autologous Cartilage",
+    "title1": "Autologous Cartilage Tip Plasty",
+    "desc1": "Instead of artificial implants, we use only your own tissues such as ear cartilage, septal cartilage, and autologous costal cartilage to minimize the risk of inflammation and contracture side effects, completing a sharp nose tip that does not sag over time.",
+    "tag2": "02. Hump & Bulbous Nose",
+    "title2": "Hump / Bulbous Nose Precision Correction",
+    "desc2": "Elaborately grinds or osteotomizes the protruding hump bone, and delicately removes the fat and soft tissue of a blunt and thick bulbous nose to improve it into a slim and sophisticated impression."
+  },
+  "Lifting": {
+    "title": "Anti-Aging (Lifting)",
+    "subtitle": "Members' anti-aging reverses the flow of time. We restore elasticity by firmly lifting from deep within the skin.",
+    "tag1": "01. Thread Lifting",
+    "title1": "Mint Thread Lifting",
+    "desc1": "Using FDA-approved dissolving threads with special cogs, it strongly pulls up sagging skin and wrinkles, allowing you to experience an immediate V-line effect.",
+    "tag2": "02. Laser Lifting",
+    "title2": "Ultherapy / Shurink",
+    "desc2": "Using High-Intensity Focused Ultrasound (HIFU) to deliver heat energy deep into the fascia layer, it promotes collagen regeneration and provides natural elasticity."
   }
 }

@@ -2,26 +2,96 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAFAF8;
+  --foreground: #2D2D2D;
+  --premium-surface: #FFFFFF;
+  --premium-gold: #A38758;
+  --premium-gold-hover: #8A7047;
+  --premium-border: #E8E6E1;
+  --premium-text-light: #7A7A7A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-premium-surface: var(--premium-surface);
+  --color-premium-gold: var(--premium-gold);
+  --color-premium-gold-hover: var(--premium-gold-hover);
+  --color-premium-border: var(--premium-border);
+  --color-premium-text-light: var(--premium-text-light);
   --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
+/* 절대적으로 다크 모드를 방어하여 언제나 베이지톤(라이트 테마)이 나오게 강제합니다. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FAFAF8 !important;
+    --foreground: #2D2D2D !important;
+    --premium-surface: #FFFFFF !important;
+    --premium-gold: #A38758 !important;
+    --premium-gold-hover: #8A7047 !important;
+    --premium-border: #E8E6E1 !important;
+    --premium-text-light: #7A7A7A !important;
   }
 }
+
+/* 다크 모드를 강제로 비활성화하고 프리미엄 웜 베이지 톤을 유지합니다. */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em; /* 세련된 자간 조절 */
+}
+
+/* 프리미엄 UI 유틸리티 클래스 */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.premium-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.premium-input {
+  background-color: #FFFFFF;
+  border: 1px solid var(--premium-border);
+  border-radius: 4px; /* 투박한 둥근 모서리 대신 세련된 각진 느낌 유지 */
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.premium-input:focus {
+  outline: none;
+  border-color: var(--premium-gold);
+  box-shadow: 0 0 0 1px var(--premium-gold);
+}
+
+.premium-button {
+  background-color: var(--premium-gold);
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-button:hover:not(:disabled) {
+  background-color: var(--premium-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(179, 155, 130, 0.5);
+}
+
+.premium-button:disabled {
+  background-color: #E8E6E1;
+  color: #A0A0A0;
+  cursor: not-allowed;
 }

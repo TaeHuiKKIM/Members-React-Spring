@@ -1,54 +1,129 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function ReservationPage() {
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '', procedure: '눈' });
+  const router = useRouter();
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', procedureType: '눈 성형' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('http://localhost:8080/api/reservations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert('예약이 접수되었습니다! 담당자가 확인 후 해피콜을 통해 예약 시간을 확정해 드립니다.');
+        router.push('/');
+      } else {
+        alert('예약 접수에 실패했습니다.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('서버 오류가 발생했습니다.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-24 pb-20">
-      <div className="container mx-auto px-6 max-w-3xl">
-        <div className="bg-white p-8 rounded-2xl shadow-xl">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">빠른 상담 예약</h1>
-          <p className="text-gray-500 text-center mb-8">원하시는 날짜와 시술을 선택하시면 담당자가 빠르게 연락드립니다.</p>
-          
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <main className="min-h-screen pt-32 pb-24" style={{ backgroundColor: 'var(--background)' }}>
+      <div className="container mx-auto px-6 max-w-2xl">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">Reservation</h1>
+          <div className="w-10 h-[1px] bg-[#b39b82] mx-auto mb-6"></div>
+          <p className="text-[#7A7A7A] text-sm tracking-wide">
+            가장 아름다운 순간을 위한 첫 걸음,<br/>
+            멤버스가 함께하겠습니다.
+          </p>
+        </div>
+
+        <div className="bg-white p-10 md:p-14 rounded-xl premium-shadow border border-[#E8E6E1]">
+          <form className="space-y-8" onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">이름</label>
-                <input type="text" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="홍길동" />
+                <label className="block text-xs font-semibold text-gray-800 mb-3 tracking-widest uppercase">Name</label>
+                <input 
+                  type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full premium-input" 
+                  placeholder="성함을 입력해주세요" 
+                />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">연락처</label>
-                <input type="tel" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="010-1234-5678" />
+                <label className="block text-xs font-semibold text-gray-800 mb-3 tracking-widest uppercase">Phone</label>
+                <input 
+                  type="tel" 
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full premium-input" 
+                  placeholder="010-0000-0000" 
+                />
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">관심 시술</label>
-                <select className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none">
-                  <option>눈 성형</option>
-                  <option>코 성형</option>
-                  <option>리프팅/안티에이징</option>
-                  <option>쁘띠 (보톡스/필러)</option>
+                <label className="block text-xs font-semibold text-gray-800 mb-3 tracking-widest uppercase">Procedure</label>
+                <select 
+                  name="procedureType"
+                  value={formData.procedureType}
+                  onChange={handleChange}
+                  className="w-full premium-input"
+                >
+                  <option value="눈 성형">Eye Surgery (눈)</option>
+                  <option value="코 성형">Rhinoplasty (코)</option>
+                  <option value="리프팅/안티에이징">Anti-aging (리프팅)</option>
+                  <option value="쁘띠 (보톡스/필러)">Petit (보톡스/필러)</option>
+                  <option value="기타 상담">기타 상담</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">희망 날짜</label>
-                <input type="date" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none" />
+                <label className="block text-xs font-semibold text-gray-800 mb-3 tracking-widest uppercase">Date</label>
+                <input 
+                  type="date" 
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  required
+                  min={new Date().toISOString().split('T')[0]}
+                  className="w-full premium-input" 
+                />
               </div>
             </div>
 
-            {/* Kakao Login Integration Placeholder */}
-            <div className="pt-4 flex flex-col space-y-4">
-              <button type="button" className="w-full bg-[#FEE500] text-black font-bold py-3 rounded-lg flex items-center justify-center space-x-2 hover:bg-[#F4DC00] transition-colors">
-                <svg viewBox="0 0 32 32" className="w-6 h-6"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-1.44 5.44c-.16.48.4.8.8.56l6.24-4.24c.4.08.88.08 1.28.08 6.96 0 12.64-4.48 12.64-10.08S22.96 4.64 16 4.64z" fill="#000"/></svg>
-                <span>카카오로 1초 만에 간편 예약하기</span>
-              </button>
+            <div className="bg-[#FAFAF8] p-6 rounded-lg border border-[#E8E6E1] mt-8">
+              <h4 className="text-xs font-semibold text-gray-800 mb-3 tracking-widest">NOTICE</h4>
+              <ul className="text-[13px] text-[#7A7A7A] space-y-2 leading-relaxed">
+                <li>• 예약 신청 후, 병원에서 전화를 드려 구체적인 예약 일시를 확정해 드립니다.</li>
+                <li>• 당일 예약이나 급한 일정은 대표번호로 문의 바랍니다.</li>
+              </ul>
+            </div>
 
-              <button type="submit" className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                일반 예약 접수
+            <div className="pt-6">
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full premium-button"
+              >
+                {isSubmitting ? '접수 중...' : '예약 접수하기'}
               </button>
             </div>
           </form>
